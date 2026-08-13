@@ -1,2 +1,2 @@
-import './style.css'
-import './utilities/slider/slider.js'
+import "./style.css";
+import "./utilities/slider/totalSliders.js";
