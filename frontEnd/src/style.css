@@ -37,7 +37,6 @@
   background-color: var(--color-cta-primary) !important;
 }
 
-
 @font-face {
   font-family: "Poppins";
   src: url(./assets/fonts/Poppins-Regular.ttf) format("trutype");
@@ -82,12 +81,13 @@
   --color-input-placeholder: #6b7280;
 
   --font-poppins: "Poppins";
+
+  --text-movie-card-title: 1rem;
 }
 
 @utility container {
-  @variant sm {
-    max-width: 100%;
-  }
+  width: 100%;
+  padding: 0 1rem;
   @variant md {
     max-width: 58rem;
   }
@@ -96,5 +96,10 @@
   }
   @variant xl {
     max-width: 86rem;
+  }
+  @media (max-width: 576px) {
+    .banner::after {
+      height: 2rem !important;
+    }
   }
 }
