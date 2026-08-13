@@ -1,13 +1,158 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>فیلم و سریال Cinevo</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinevo Streaming Platform - Home Page</title>
+  <script type="module" src="/src/main.js" defer></script>
+
+</head>
+
+<body class="bg-bg-primary font-poppins">
+  <!-- Header Start -->
+  <header class="header">
+    <section class="absolute z-30 top-4 left-0 right-0">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <h2 class="text-white font-bold text-2xl">Cinevo</h2>
+            <ul class="flex gap-4 justify-between items-center ml-20">
+              <li
+                class="menu-item text-text-primary hover:text-text-secondary transition-colors duration-300 text-sm font-normal relative menu-item-active">
+                <a href="#">Home</a>
+              </li>
+              <li
+                class="menu-item text-text-primary hover:text-text-secondary transition-colors duration-300 text-sm font-normal relative">
+                <a href="#">Movies</a>
+              </li>
+              <li
+                class="menu-item text-text-primary hover:text-text-secondary transition-colors duration-300 text-sm font-normal relative">
+                <a href="#">Series</a>
+              </li>
+              <li
+                class="menu-item text-text-primary hover:text-text-secondary transition-colors duration-300 text-sm font-normal relative">
+                <a href="#">Genres</a>
+              </li>
+              <li
+                class="menu-item text-text-primary hover:text-text-secondary transition-colors duration-300 text-sm font-normal relative">
+                <a href="#">New Releases</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex gap-10 items-center">
+            <div>
+              <input type="text"
+                class="w-90 text-text-secondary text-sm bg-input-bg py-2.5 px-4 rounded-full border-2 hover:border-input-border-hover focus:border-input-border-focus border-input-border outline-hidden transition-colors duration-300"
+                placeholder="Search for movies, series...">
+            </div>
+            <a
+              class="block w-34 text-center py-2.5 text-sm font-semibold bg-cta-primary hover:bg-cta-hover text-white transition-colors duration-300 rounded-xl cursor-pointer">Login
+              | Signup</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="banner relative h-195 max-xl:h-150 max-lg:h-140 max-md:h-100 max-sm:h-70">
+      <div class="hero-slider h-full w-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class=" w-full object-cover h-full" src="./public/Images/Banners/Arcane.jpg" loading="lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img class=" w-full object-cover h-full" src="./public/Images/Banners/Vikings.jpg" loading="lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          <div class="swiper-slide">
+            <img class=" w-full object-cover h-full" src="./public/Images/Banners/GameOfThrones.jpg" loading="lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination "></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+
+      </div>
+    </section>
+  </header>
+  <!-- Header End -->
+
+  <!-- Main Start -->
+  <main>
+    <!-- Trending -->
+    <section>
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <h2 class="text-text-primary font-bold text-xl">Trending Now</h2>
+          <a class="text-text-secondary text-xs flex items-center hover:text-text-primary transition-colors duration-300"
+            href="#">View All
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 32 32" id="right-arrow">
+              <path
+                d="M22.94,16.31a1,1,0,0,0,0-.25V16a.85.85,0,0,0-.06-.31,0,0,0,0,0,0,0h0a.85.85,0,0,0-.19-.3l0,0-5-5a1,1,0,0,0-1.42,1.42L19.59,15H10a1,1,0,0,0,0,2h9.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.19-.3A.3.3,0,0,0,22.94,16.31Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Releases -->
+    <section>
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <h2 class="text-text-primary font-bold text-xl">New Releases</h2>
+          <a class="text-text-secondary text-xs flex items-center hover:text-text-primary transition-colors duration-300"
+            href="#">View All
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 32 32" id="right-arrow">
+              <path
+                d="M22.94,16.31a1,1,0,0,0,0-.25V16a.85.85,0,0,0-.06-.31,0,0,0,0,0,0,0h0a.85.85,0,0,0-.19-.3l0,0-5-5a1,1,0,0,0-1.42,1.42L19.59,15H10a1,1,0,0,0,0,2h9.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.19-.3A.3.3,0,0,0,22.94,16.31Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Popular Series -->
+    <section>
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <h2 class="text-text-primary font-bold text-xl">Popular Series</h2>
+          <a class="text-text-secondary text-xs flex items-center hover:text-text-primary transition-colors duration-300"
+            href="#">View All
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 32 32" id="right-arrow">
+              <path
+                d="M22.94,16.31a1,1,0,0,0,0-.25V16a.85.85,0,0,0-.06-.31,0,0,0,0,0,0,0h0a.85.85,0,0,0-.19-.3l0,0-5-5a1,1,0,0,0-1.42,1.42L19.59,15H10a1,1,0,0,0,0,2h9.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.19-.3A.3.3,0,0,0,22.94,16.31Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Recommended -->
+    <section>
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <h2 class="text-text-primary font-bold text-xl">Recommended For You</h2>
+          <a class="text-text-secondary text-xs flex items-center hover:text-text-primary transition-colors duration-300"
+            href="#">View All
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 32 32" id="right-arrow">
+              <path
+                d="M22.94,16.31a1,1,0,0,0,0-.25V16a.85.85,0,0,0-.06-.31,0,0,0,0,0,0,0h0a.85.85,0,0,0-.19-.3l0,0-5-5a1,1,0,0,0-1.42,1.42L19.59,15H10a1,1,0,0,0,0,2h9.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.19-.3A.3.3,0,0,0,22.94,16.31Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Main End -->
+</body>
+
 </html>

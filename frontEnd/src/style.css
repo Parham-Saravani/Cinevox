@@ -1,1 +1,100 @@
 @import "tailwindcss";
+
+/*
+
+  - Custome Class
+
+*/
+.menu-item-active::before {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  width: 2.5rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  border-radius: 4rem;
+  background-color: var(--color-cta-primary);
+  -webkit-border-radius: 4rme;
+  -moz-border-radius: 4rme;
+  -ms-border-radius: 4rme;
+  -o-border-radius: 4rme;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 19rem;
+  background-image: linear-gradient(to bottom, transparent, rgba(6 8 22 / 1));
+  z-index: 1;
+}
+.swiper-pagination-bullet {
+  background-color: var(--color-text-secondary) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--color-cta-primary) !important;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-Regular.ttf) format("trutype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-Medium.ttf) format("trutype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-SemiBold.ttf) format("trutype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-Bold.ttf) format("trutype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-Black.ttf) format("trutype");
+  font-weight: 800;
+}
+@theme {
+  /*
+    - app color pallete - 
+  */
+  --color-bg-primary: #060816;
+  --color-text-primary: #e8eaf6;
+  --color-text-secondary: #9ca3af;
+  --color-cta-primary: #7c4dff;
+  --color-cta-hover: #946dff;
+
+  --color-input-bg: #0d1223;
+  --color-input-border: #252b42;
+  --color-input-border-hover: #343b56;
+  --color-input-border-focus: #7c4dff;
+
+  --color-input-text: #ffffff;
+  --color-input-placeholder: #6b7280;
+
+  --font-poppins: "Poppins";
+}
+
+@utility container {
+  @variant sm {
+    max-width: 100%;
+  }
+  @variant md {
+    max-width: 58rem;
+  }
+  @variant lg {
+    max-width: 73rem;
+  }
+  @variant xl {
+    max-width: 86rem;
+  }
+}
