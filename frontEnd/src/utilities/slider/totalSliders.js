@@ -6,9 +6,9 @@ createSlider(".hero-slider", {
   fadeEffect: {
     crossFade: true,
   },
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   pagination: {
     el: ".swiper-pagination",
   },
@@ -32,8 +32,7 @@ createSlider(".trending-slider", {
       spaceBetween: 40,
     },
     1280: {
-      slidesPerView: 6,
-      spaceBetween: 40,
+      slidesPerView: "auto",
     },
   },
 });
@@ -56,8 +55,7 @@ createSlider(".release-slider", {
       spaceBetween: 40,
     },
     1280: {
-      slidesPerView: 6,
-      spaceBetween: 40,
+      slidesPerView: "auto",
     },
   },
 });
@@ -80,8 +78,7 @@ createSlider(".popular-slider", {
       spaceBetween: 40,
     },
     1280: {
-      slidesPerView: 6,
-      spaceBetween: 40,
+      slidesPerView: "auto",
     },
   },
 });
@@ -104,8 +101,7 @@ createSlider(".recommended-slider", {
       spaceBetween: 40,
     },
     1280: {
-      slidesPerView: 6,
-      spaceBetween: 40,
+      slidesPerView: "auto",
     },
   },
 });
