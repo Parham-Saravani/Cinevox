@@ -811,7 +811,7 @@
                 <h2 class="flex gap-2 items-center text-text-primary font-semibold text-2xl">Comments <span
                         class="text-text-secondary text-sm total-comments">(125)</span></h2>
                 <div class="mt-3">
-                    <div class="">
+                    <div class="bg-linear-to-br from-cta-primary/10 via-transparent to-cta-primary/10 px-3 py-4 border border-white/10 rounded-xl">
                         <form
                             class="grid grid-cols-3 max-lg:grid-cols-5 max-md:grid-cols-3 gap-4 text-sm max-lg:text-xs max-md:text-sm">
                             <div class="col-span-1 max-lg:col-span-2 max-md:col-span-3 -mt-2 grid grid-cols-1">
@@ -849,7 +849,7 @@
                             </div>
 
                             <div
-                                class="col-span-2 max-lg:col-span-3 max-md:col-span-3 h-50 relative text-text-secondary  focus-within:border-input-border-focus transition-colors duration-300  bg-input-bg/50 px-3 py-3 rounded-xl border-2 border-input-border/50">
+                                class="col-span-2 max-lg:col-span-3 max-md:col-span-3 h-50 relative text-text-secondary  focus-within:border-input-border-focus focus-within:shadow-[0_0_20px_rgba(139,92,246,.2)] transition-normal duration-300  bg-input-bg/50 px-3 py-3 rounded-xl border-2 border-input-border/50">
                                 <textarea
                                     class="w-full h-full outline-hidden resize-none placeholder:text-text-secondary custom-scroll"
                                     placeholder="Share your thoughts about this series..."></textarea>
@@ -907,7 +907,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -919,9 +918,9 @@
     <footer class="py-4 border-b border-t border-input-border">
         <div class="container mx-auto">
             <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <a href="/" class="text-white font-bold text-2xl">Cinevo</a>
-                    <ul class="ml-20 flex gap-6 items-center">
+                <div class="flex max-sm:justify-center max-sm:w-full items-center">
+                    <a href="/" class="max-sm:hidden text-white font-bold text-2xl">Cinevo</a>
+                    <ul class="ml-20 max-sm:ml-0 max-sm:flex-wrap max-sm:justify-center flex gap-6 items-center">
                         <li
                             class="menu-item text-white hover:text-text-secondary transition-colors duration-300 text-sm font-normal relative">
                             <a href="">About</a>
@@ -944,7 +943,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="max-sm:hidden flex items-center gap-2">
                     <a href="#">
                         <svg class="text-text-secondary transition-colors duration-300 hover:text-text-primary cursor-pointer size-6"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="twitter">
