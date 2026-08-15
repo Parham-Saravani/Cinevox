@@ -7,7 +7,9 @@ export default defineConfig({
     rolldownOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        movie: resolve(__dirname, "movie.html"),
+        movies: resolve(__dirname, "movie.html"),
+        series: resolve(__dirname, "series.html"),
+        auth: resolve(__dirname, "auth.html"),
       },
     },
   },

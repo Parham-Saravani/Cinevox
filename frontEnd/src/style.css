@@ -5,6 +5,25 @@
   - Custome Class
 
 */
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-input-border);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-input-border-hover);
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /* Home Page */
 .menu-item-active::before {
   content: "";
@@ -69,30 +88,28 @@
   border-color: var(--color-cta-primary);
 }
 
-.spoil-active{
+.spoil-active {
   background-color: var(--color-cta-primary);
 }
-.spoil-active::before{
+.spoil-active::before {
   background-color: #fff;
   left: 50%;
 }
 
-.custom-scroll::-webkit-scrollbar{
-  width: 8px;
+/* Auth Page */
+.auth-overlay {
+  background-image:
+    linear-gradient(180deg, var(--color-bg-primary) , transparent , var(--color-bg-primary)), 
+    linear-gradient(270deg , var(--color-bg-primary) , transparent , var(--color-bg-primary));
 }
-.custom-scroll::-webkit-scrollbar-thumb{
-  background: var(--color-input-border);
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+
+.auth-header-active{
+  border-bottom-color: var(--color-cta-primary);
+  color: var(--color-cta-primary);
 }
-.custom-scroll::-webkit-scrollbar-thumb:hover{
-  background: var(--color-input-border-hover);
-}
-.custom-scroll::-webkit-scrollbar-track{
-  background:transparent;
+.remember-checkbox:has(input:checked){
+    background-color: var(--color-cta-primary);
+    color: #fff;
 }
 /* Fonts */
 @font-face {

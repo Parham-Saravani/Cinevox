@@ -1,2 +1,2 @@
 import "../../style.css";
-import "../slider/totalSliders.js";
+import "../slider/homeSliders.js";
