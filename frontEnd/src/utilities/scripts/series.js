@@ -1,2 +1,1 @@
-import "../../style.css";
-import "../slider/movieAndSeriesSliders.js"
+import '../../style.css'

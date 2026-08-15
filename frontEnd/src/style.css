@@ -54,6 +54,29 @@
   );
   z-index: 1;
 }
+.banner-data:before {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  background-color: var(--color-text-secondary);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.banner-data:first-child::before {
+  content: none;
+}
+.banner-data:first-child{
+  margin-left: 0;
+}
+
 .swiper-pagination-bullet {
   background-color: var(--color-text-secondary) !important;
 }
@@ -61,7 +84,6 @@
   background-color: var(--color-cta-primary) !important;
 }
 /* Movie Page */
-
 .header-hero::after {
   content: "";
   inset: 0 0 -8px 0;
@@ -82,7 +104,7 @@
     );
 }
 
-/* Series Page */
+/* Serie Page */
 .active-season {
   background-color: var(--color-cta-primary);
   border-color: var(--color-cta-primary);
@@ -99,18 +121,38 @@
 /* Auth Page */
 .auth-overlay {
   background-image:
-    linear-gradient(180deg, var(--color-bg-primary) , transparent , var(--color-bg-primary)), 
-    linear-gradient(270deg , var(--color-bg-primary) , transparent , var(--color-bg-primary));
+    linear-gradient(
+      180deg,
+      var(--color-bg-primary),
+      transparent,
+      var(--color-bg-primary)
+    ),
+    linear-gradient(
+      270deg,
+      var(--color-bg-primary),
+      transparent,
+      var(--color-bg-primary)
+    );
 }
-
-.auth-header-active{
+.auth-header-active {
   border-bottom-color: var(--color-cta-primary);
   color: var(--color-cta-primary);
 }
-.remember-checkbox:has(input:checked){
-    background-color: var(--color-cta-primary);
-    color: #fff;
+.remember-checkbox:has(input:checked) {
+  background-color: var(--color-cta-primary);
+  color: #fff;
 }
+
+
+/* Movies Page */
+.acitve-layout{
+  color: var(--color-text-primary);
+  /* background-color:rgba(156 163 175 / 0.2); */
+  background-color: var(--color-input-border-focus);
+}
+/* Series Page */
+
+
 /* Fonts */
 @font-face {
   font-family: "Poppins";
@@ -157,7 +199,7 @@
 
   --font-poppins: "Poppins";
 
-  --text-movie-card-title: 1rem;
+  --text-movie-card-title: 0.85rem;
 }
 
 @utility container {
