@@ -73,7 +73,7 @@
 .banner-data:first-child::before {
   content: none;
 }
-.banner-data:first-child{
+.banner-data:first-child {
   margin-left: 0;
 }
 
@@ -143,15 +143,13 @@
   color: #fff;
 }
 
-
 /* Movies Page */
-.acitve-layout{
+.acitve-layout {
   color: var(--color-text-primary);
   /* background-color:rgba(156 163 175 / 0.2); */
   background-color: var(--color-input-border-focus);
 }
 /* Series Page */
-
 
 /* Fonts */
 @font-face {
@@ -179,6 +177,24 @@
   src: url(./assets/fonts/Poppins-Black.ttf) format("trutype");
   font-weight: 800;
 }
+
+/* KeyFrames */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @theme {
   /*
     - app color pallete - 
@@ -200,6 +216,11 @@
   --font-poppins: "Poppins";
 
   --text-movie-card-title: 0.85rem;
+
+  /* Animations */
+  --animate-fadeIn: fadeIn 300ms ease-in;
+  --animate-fadeOut: fadeOut 300ms ease-out;
+
 }
 
 @utility container {

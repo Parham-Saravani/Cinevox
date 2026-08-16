@@ -23,7 +23,7 @@ const serieSchema = new mongoose.Schema(
 
     overview: String,
     bannerDescription: String,
-
+    duration: Number,
     releaseYear: Number,
 
     genres: [String],
@@ -61,6 +61,7 @@ const serieSchema = new mongoose.Schema(
 
     seasons: [
       {
+        _id:false,
         title: String,
 
         episodes: [
@@ -68,8 +69,7 @@ const serieSchema = new mongoose.Schema(
             _id: false,
 
             title: String,
-            releaseDate: Date,
-            videoUrl: String,
+            releaseDate: String,
           },
         ],
       },
