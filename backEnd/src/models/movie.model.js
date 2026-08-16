@@ -24,11 +24,7 @@ const movieSchema = new mongoose.Schema(
     genres: [String],
 
     trailer: {
-      type: {
-        key: { type: String },
-        name: { type: String },
-        site: { type: String },
-      },
+      type: String,
       required: true,
       default: null,
     },

@@ -25,8 +25,7 @@ createSlider(".cast-slider", {
       slidesPerView: 11,
     },
     1280: {
-      slidesPerView: 13,
-      spaceBetween: 40,
+      slidesPerView: 'auto',
     },
   },
 });

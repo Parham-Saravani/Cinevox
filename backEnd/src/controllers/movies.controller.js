@@ -12,5 +12,10 @@ const takeMovies = async (req, res) => {
   });
   res.json(finalMovies);
 };
+const takeMovieData = async (req, res) => {
+  const title = req.params.title;
+  const movieData = await Movie.findOne({ slug: title });
+  res.json(movieData);
+};
 
-export { takeMovies };
+export { takeMovies, takeMovieData };

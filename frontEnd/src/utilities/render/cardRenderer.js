@@ -1,9 +1,14 @@
 import Card from "../../components/cards/card.js";
-const createElements = (elementClassName, data) => {
-  const container = document.querySelector(elementClassName);
+const createCards = (itemClass, data) => {
+  const container = document.querySelector(itemClass);
+  console.log(container);
+  
   data.forEach((item) => {
-    console.log(item);
     const { title, slug, type, genres, poster } = item;
+    container.insertAdjacentHTML(
+      "afterbegin",
+      Card(title, slug, type, genres, poster),
+    );
   });
 };
-export default createElements
+export default createCards;

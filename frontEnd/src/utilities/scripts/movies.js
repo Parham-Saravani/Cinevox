@@ -1,3 +1,3 @@
 import "../../style.css";
-
-import "../movies/takeMovies.js";
+import fetchDataAndCreateCards from "../takeMovies";
+fetchDataAndCreateCards('.movies-page-movies-container')

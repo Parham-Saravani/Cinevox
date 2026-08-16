@@ -12,6 +12,8 @@ export default defineConfig({
         movie: resolve(__dirname, "movie.html"),
         serie: resolve(__dirname, "serie.html"),
         auth: resolve(__dirname, "auth.html"),
+        genre: resolve(__dirname, "genre.html"),
+        release: resolve(__dirname, "release.html"),
       },
     },
   },
