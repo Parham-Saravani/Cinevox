@@ -1,8 +1,8 @@
 const baseUrl = "http://localhost:64235";
-const apiRequest = async (addr , param = null , method = "GET", body = null ) => {
+const apiRequest = async (addr, param = null, method = "GET", body = null) => {
   console.log(`${baseUrl}${addr}`);
-  
-  const data = await fetch(`${baseUrl}${addr}`, {
+
+  const data = await fetch(`${baseUrl}${addr}/${param ? param : ""}`, {
     method: `${method}`,
     headers: {
       "content-type": "application/json",

@@ -7,31 +7,30 @@ const movieSchema = new mongoose.Schema(
 
     type: { type: String, default: "movie" },
 
-    poster: { type: String },
-    banner: { type: String },
-    video: { type: String },
-    overview: { type: String },
-    bannerDescription: { type: String },
+    poster: String,
+    banner: String,
+    video: String,
+    overview: String,
+    bannerDescription: String,
 
-    releaseYear: { type: String },
+    releaseYear: String,
 
-    duration: { type: String },
-    runtime: { type: String },
+    duration: String,
+    runtime: String,
 
-    rating: { type: String },
-    ageRating: { type: String },
+    rating: String,
+    ageRating: String,
 
     genres: [String],
 
     trailer: {
       type: String,
-      required: true,
       default: null,
     },
 
-    screenshots: { type: [String], required: true, default: null },
+    screenshots: { type: [String], default: null },
 
-    director: { type: String },
+    director: String,
 
     cast: [
       {

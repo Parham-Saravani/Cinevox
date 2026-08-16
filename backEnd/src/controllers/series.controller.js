@@ -1,16 +1,11 @@
 import Serie from "../models/series.model.js";
 const takeAllSeries = async (req, res) => {
-  const series = await Serie.find();
-  const finalSeries = series.map((serie) => {
-    return {
-      title: serie.title,
-      slug: serie.slug,
-      type: serie.type,
-      genres: serie.genres,
-      poster: serie.poster,
-    };
-  });
-  res.json(finalSeries)
+  const series = await Serie.find({} , {title:true , slug: true , type : true, genres:true, poster:true});
+  res.json(series);
 };
-
-export { takeAllSeries };
+const takeSerie = async (req, res) => {
+  const title = req.params.title;
+  const serieData = await Serie.findOne({ slug: title });
+  res.json(serieData);
+};
+export { takeAllSeries, takeSerie };

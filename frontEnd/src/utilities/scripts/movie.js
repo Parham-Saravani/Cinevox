@@ -1,3 +1,4 @@
 import "../../style.css";
 import "../slider/movieAndSeriesSliders.js"
-import "../takeMovieData.js"
+import fetchMovieDataAndChangeContent from "../details/renderDetails.js"
+fetchMovieDataAndChangeContent('/api/movies')

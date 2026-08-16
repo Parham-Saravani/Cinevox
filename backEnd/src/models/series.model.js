@@ -1,47 +1,83 @@
 import mongoose from "mongoose";
 const serieSchema = new mongoose.Schema(
   {
-    title: { type: String },
-    type: { type: String, enum: ["series", "anime"] }, // movie | series | anime
+    title: {
+      type: String,
+      required: true,
+    },
 
-    poster: { type: String },
-    banner: { type: String },
+    slug: {
+      type: String,
+      required: true,
+      unique: true,
+    },
 
-    overview: { type: String },
+    type: {
+      type: String,
+      enum: ["series", "anime"],
+      required: true,
+    },
 
-    bannerDescription: { type: String },
+    poster: String,
+    banner: String,
 
-    releaseYear: { type: String },
+    overview: String,
+    bannerDescription: String,
+
+    releaseYear: Number,
 
     genres: [String],
 
-    rating: { type: String },
+    rating: Number,
 
-    ageRating: { type: String }, // TV-MA, R, PG-13, TV-14, ...
+    ageRating: String,
 
-    runtime: { type: String },
+    runtime: String,
 
-    director: { type: String },
+    director: String,
 
-    cast: [{ title: { type: String }, image: { type: String } }],
+    cast: [
+      {
+        title: String,
+        image: String,
+      },
+    ],
 
-    featured: { type: Boolean, default: false },
-    trending: { type: Boolean, default: false },
+    trailer: {
+      type: String,
+      default: null,
+    },
+    screenshots: { type: [String], default: null },
+
+    featured: {
+      type: Boolean,
+      default: false,
+    },
+
+    trending: {
+      type: Boolean,
+      default: false,
+    },
 
     seasons: [
       {
-        title: { type: String },
+        title: String,
+
         episodes: [
           {
-            title: { type: String },
-            releaseDate: { type: String },
-            videoUrl: { type: String },
+            _id: false,
+
+            title: String,
+            releaseDate: Date,
+            videoUrl: String,
           },
         ],
       },
     ],
   },
-  { timestamps: true },
+  {
+    timestamps: true,
+  },
 );
 
 const Serie = mongoose.model("Serie", serieSchema);
