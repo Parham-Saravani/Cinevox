@@ -1,8 +1,6 @@
 import Card from "../../components/cards/card.js";
 const createCards = (itemClass, data) => {
-  const container = document.querySelector(itemClass);
-  console.log(container);
-  
+  const container = document.querySelector(itemClass);  
   data.forEach((item) => {
     const { title, slug, type, genres, poster } = item;
     container.insertAdjacentHTML(

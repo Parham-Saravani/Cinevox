@@ -1,5 +1,5 @@
 import Movie from "../models/movie.model.js";
-const takeMovies = async (req, res) => {
+const takeAllMovies = async (req, res) => {
   const movies = await Movie.find();
   const finalMovies = movies.map((movie) => {
     return {
@@ -18,4 +18,4 @@ const takeMovieData = async (req, res) => {
   res.json(movieData);
 };
 
-export { takeMovies, takeMovieData };
+export { takeAllMovies, takeMovieData };

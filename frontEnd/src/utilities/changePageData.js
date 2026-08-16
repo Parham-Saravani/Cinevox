@@ -40,8 +40,8 @@ const changePageContent = (
   elements.titleEl.textContent = title;
   elements.descriptionEl.textContent = bannerDescription;
   elements.overviewEl.textContent = overview;
-//   createCasts(cast);
-//   setLoaderToCasts();
+  createCasts(cast);
+  setLoaderToCasts();
   elements.releaseEl.textContent = releaseYear;
   changeDurationFormat(duration);
   createGenres(genres);
@@ -135,12 +135,14 @@ const setLoaderToTrailer = () => {
 const setLoaderToScreenShots = () => {
   document.querySelectorAll(".page-screenshot").forEach((item) => {
     item.addEventListener("load", () => {
+      item.classList.remove("opacity-0");
       item.classList.remove("bg-gray-900");
       item.classList.remove("animate-pulse");
     });
-    item.addEventListener('error', () => {
-        item.setAttribute('src', 'public/Images/Banners/GameOfThrones.jpg')
-    })
+    item.addEventListener("error", () => {
+      item.classList.remove("opacity-0");
+      item.setAttribute("src", "public/Images/Banners/GameOfThrones.jpg");
+    });
   });
 };
 export default changePageContent;

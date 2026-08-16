@@ -54,10 +54,96 @@
 
     <!-- Main Start -->
     <main class="mt-10 text-text-primary">
-        <div class="container mx-auto">
-            <h3 class="font-bold text-3xl">Explore Movies</h3>
-            <p class="text-text-secondary text-sm">Discover thousands of movies from every genre and decade.</p>
-        </div>
+        <section>
+            <div class="container mx-auto">
+                <h3 class="font-bold text-3xl max-sm:text-2xl">Explore Series</h3>
+                <p class="mt-1 text-text-secondary text-sm max-sm:text-xs">Discover captivating stories, unforgettable
+                    characters, and binge-worthy series from every genre.</p>
+                <div
+                    class="mt-7 text-sm max-sm:text-xs text-text-secondary/50 bg-linear-to-br from-cta-primary/10 via-transparent to-cta-primary/10 px-3 py-4 border border-white/10 rounded-xl">
+                    <div class="grid grid-cols-5 max-xl:grid-cols-1 gap-3">
+                        <div class="col-span-4 max-xl:col-span-1 max-md:grid-cols-1 grid grid-cols-4 gap-3">
+                            <div class="col-span-2 max-md:col-span-1">
+                                <input
+                                    class="w-full text-text-secondary h-full rounded-xl bg-input-bg/50 border-2 border-input-border/50 outline-hidden px-2 py-3 placeholder:text-text-secondary/50 transition-colors duration-300 hover:border-input-border-hover focus:border-input-border-focus/50"
+                                    placeholder="Search movie..." type="text">
+                            </div>
+                            <div class="col-span-2 max-md:col-span-1 grid grid-cols-2 gap-3">
+                                <div class="col-span-1 relative">
+                                    <button
+                                        class="flex items-center justify-between px-2.5 py-3 bg-input-bg/50 border-2 border-input-border/50 w-full h-full rounded-xl cursor-pointer">All
+                                        genres</button>
+                                    <div
+                                        class="hidden absolute mt-1 w-full h-30 bg-input-bg rounded-xl border border-input-border">
+                                    </div>
+                                </div>
+
+                                <div class="col-span-1 relative">
+                                    <button
+                                        class="flex items-center justify-between px-2.5  bg-input-bg/50 border-2 border-input-border/50 w-full h-full rounded-xl cursor-pointer">All
+                                        years</button>
+                                    <div
+                                        class="hidden absolute mt-1 w-full h-30 bg-input-bg  rounded-xl border border-input-border">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-span-1 flex max-xl:justify-between items-center justify-end">
+                            <div
+                                class="h-12.5 w-23 flex gap-2 items-center rounded-xl bg-input-bg/50 px-2 py-2 border border-input-border/50 mr-15 max-xl:mr-0">
+                                <button
+                                    class="flex items-center justify-center text-text-secondary hover:bg-text-secondary/20 transition-colors duration-300 h-full w-full rounded-xl cursor-pointer acitve-layout">
+                                    <svg class="size-4.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        id="layout">
+                                        <path
+                                            d="M10 2H5A3 3 0 0 0 2 5v5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V3A1 1 0 0 0 10 2zM9 9H4V5A1 1 0 0 1 5 4H9zM19 2H14a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V5A3 3 0 0 0 19 2zm1 7H15V4h4a1 1 0 0 1 1 1zM10 13H3a1 1 0 0 0-1 1v5a3 3 0 0 0 3 3h5a1 1 0 0 0 1-1V14A1 1 0 0 0 10 13zM9 20H5a1 1 0 0 1-1-1V15H9zM21 13H14a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a3 3 0 0 0 3-3V14A1 1 0 0 0 21 13zm-1 6a1 1 0 0 1-1 1H15V15h5z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </button>
+                                <button
+                                    class="flex items-center justify-center text-text-secondary hover:bg-text-secondary/20 transition-colors duration-300 h-full w-full rounded-xl cursor-pointer">
+                                    <svg class="size-4.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        id="list">
+                                        <g>
+                                            <g>
+                                                <circle cx="4" cy="7" r="1" fill="currentColor"></circle>
+                                                <circle cx="4" cy="12" r="1" fill="currentColor"></circle>
+                                                <circle cx="4" cy="17" r="1" fill="currentColor"></circle>
+                                                <rect width="14" height="2" x="7" y="11" rx=".94" ry=".94"
+                                                    fill="currentColor"></rect>
+                                                <rect width="14" height="2" x="7" y="16" rx=".94" ry=".94"
+                                                    fill="currentColor"></rect>
+                                                <rect width="14" height="2" x="7" y="6" rx=".94" ry=".94"
+                                                    fill="currentColor"></rect>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span
+                                class="flex items-center text-xs hover:text-text-secondary/70 transition-colors duration-300 cursor-pointer">Clear
+                                Filters
+                                <svg class="size-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    id="restart">
+                                    <path fill="currentColor"
+                                        d="M18.2577 3.50828C18.538 3.62437 18.7207 3.89785 18.7207 4.20119V8.44383C18.7207 8.85805 18.3849 9.19383 17.9707 9.19383H13.728C13.4247 9.19383 13.1512 9.0111 13.0351 8.73085C12.9191 8.45059 12.9832 8.128 13.1977 7.9135L14.8007 6.3105C12.1674 5.20912 9.01606 5.7309 6.87348 7.87348C4.04217 10.7048 4.04217 15.2952 6.87348 18.1265C9.70478 20.9578 14.2952 20.9578 17.1265 18.1265C18.7727 16.4803 19.4622 14.2401 19.1935 12.0937C19.142 11.6827 19.4335 11.3078 19.8445 11.2563C20.2555 11.2049 20.6304 11.4963 20.6819 11.9073C21.0057 14.4934 20.1746 17.1997 18.1872 19.1872C14.7701 22.6043 9.2299 22.6043 5.81282 19.1872C2.39573 15.7701 2.39573 10.2299 5.81282 6.81282C8.55119 4.07444 12.6515 3.5312 15.9309 5.18028L17.4404 3.67086C17.6549 3.45637 17.9774 3.3922 18.2577 3.50828Z">
+                                    </path>
+                                </svg></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-7">
+            <div class="container mx-auto">
+                <div
+                    class="grid grid-cols-7 max-xl:grid-cols-6 max-lg:grid-cols-5 max-md:grid-cols-4 max-sm:grid-cols-3 gap-5 movies-page-movies-container">
+
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Main End -->
     <script type="module" src="src/utilities/scripts/series.js"></script>
