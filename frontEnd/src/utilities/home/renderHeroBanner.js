@@ -13,9 +13,9 @@ const renderBanners = (data) => {
             <img class=" w-full object-cover h-full" src="public${item.banner}" loading="lazy">
             <div class="absolute bg-linear-90 from-black/70 via-black/60 to-transparent w-full top-0 right-0 h-full">
               <div class="container mx-auto">
-                <div class="top-0 bottom-0 my-auto absolute h-fit z-1">
-                  <h1 class="text-white text-6xl font-bold max-md:text-4xl">${item.title}</h1>
-                  <p class="mt-2 text-text-secondary w-140 max-sm:w-100 max-md:text-[13px] max-md:line-clamp-3">${item.bannerDescription}</p>
+                <div class="top-0 max-md:top-8 bottom-0 my-auto absolute h-fit">
+                  <h1 class="text-white text-6xl font-bold max-lg:text-4xl max-sm:text-2xl">${item.title}</h1>
+                  <p class="mt-2 text-text-secondary w-140 max-sm:w-full max-md:text-[13px] max-md:line-clamp-3 max-sm:line-clamp-2">${item.bannerDescription}</p>
                   <div class="mt-5 flex">
                     <button class="flex max-md:gap-1 gap-2 items-center justify-center bg-cta-primary hover:bg-cta-hover text-text-primary font-semibold w-45 max-md:w-fit text-sm max-md:text-[10px] max-md:px-3 py-3 max-md:py-0 transition-colors duration-300 cursor-pointer rounded-xl" data-slug=${item.slug}>
                       <svg class="size-6 max-md:size-4" viewBox="0 0 24 24" id="play">
@@ -32,7 +32,7 @@ const renderBanners = (data) => {
                       </svg>
                       Add To Watchlist</button>
                   </div>
-                  <div class="mt-4 flex items-center text-sm max-md:text-xs">
+                  <div class="mt-4 flex flex-wrap items-center text-sm max-md:text-xs">
                     <p class="relative mx-4 flex gap-1 items-center text-text-secondary banner-data">
                       <svg class="size-4" viewBox="0 0 24 24" id="star">
                         <g transform="translate(2 2.5)">
@@ -47,7 +47,6 @@ const renderBanners = (data) => {
                       ${item.rating}/10
                     </p>
                     <p class="relative mx-4 text-text-secondary banner-data">${item.releaseYear}</p>
-                    <p class="relative mx-4 text-text-secondary banner-data">${item.genres.map((item) => `<span>${item}</span>`)}</p>
                     <p class="relative mx-4 text-text-secondary banner-data">${changeDurationFormat(item.duration)}</p>
                   </div>
                 </div>

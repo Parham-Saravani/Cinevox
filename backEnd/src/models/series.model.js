@@ -61,7 +61,7 @@ const serieSchema = new mongoose.Schema(
 
     seasons: [
       {
-        _id:false,
+        _id: false,
         title: String,
 
         episodes: [

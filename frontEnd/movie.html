@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="bg-bg-primary font-poppins pb-4\">
+<body class="bg-bg-primary relative font-poppins pb-4">
+    <!-- Toast -->
+    <div class="order-1 fixed top-3 left-3 w-fit z-20 bg-input-bg px-3 py-3 border border-white/10 rounded-xl">
+        <div class="flex items-center text-text-primary">
+            <span class="bg-input-border/50 px-2 py-2 rounded-md text-text-secondary">
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="alert">
+                    <circle cx="64" cy="64" r="48" stroke="#000" stroke-width="7" fill="none"></circle>
+                    <path stroke="#000" stroke-linecap="round" stroke-width="7" d="M64 40L64 69" fill="none"></path>
+                    <path fill="#000"
+                        d="M69 82C69 84.7614 66.7614 87 64 87C61.2386 87 59 84.7614 59 82C59 79.2386 61.2386 77 64 77C66.7614 77 69 79.2386 69 82Z">
+                    </path>
+                </svg>
+            </span>
+            <p class="ml-3 text-sm">Your comment submited.</p>
+        </div>
+    </div>
+
     <!-- Header Start -->
     <header>
-        <section class="absolute z-30 top-5 left-0 right-0">
+        <section class="absolute z-10 top-5 left-0 right-0">
             <div class="container mx-auto">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center">
@@ -63,8 +79,12 @@
                     </div>
                     <div
                         class="max-sm:mt-4 ml-9 w-fit max-sm:ml-0 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
-                        <h1 class="text-white text-6xl max-md:text-5xl max-sm:text-4xl font-bold page-title">Vikings</h1>
-                        <p class="mt-6 text-white w-140 max-lg:w-full max-md:w-90 max-sm:hidden max-md:line-clamp-3 page-description"></p>
+                        <h1
+                            class="text-white text-6xl max-md:text-5xl max-sm:text-4xl font-bold max-sm:text-center page-title">
+                            Vikings</h1>
+                        <p
+                            class="mt-6 text-white w-140 max-lg:w-full max-md:w-90 max-sm:hidden max-md:line-clamp-3 page-description">
+                        </p>
                         <div class="mt-5 flex flex-wrap gap-3 max-sm:items-center max-sm:justify-start">
                             <button
                                 class="flex gap-2 items-center justify-center bg-cta-primary hover:bg-cta-hover text-text-primary font-semibold w-45 max-lg:w-40 max-sm:basis-30 max-sm:text-[10px] text-sm py-3 transition-colors duration-300 cursor-pointer rounded-xl">
@@ -113,7 +133,8 @@
                         </div>
                     </div>
 
-                    <div class="max-lg:order-1 col-span-12 flex flex-col lg:col-span-4 xl:col-span-3 bg-linear-to-br from-cta-primary/5 via-transparent to-cta-primary/5 relative border border-white/20 backdrop-blur-2xl rounded-xl px-5 py-6 mt-4">
+                    <div
+                        class="max-lg:order-1 col-span-12 flex flex-col lg:col-span-4 xl:col-span-3 bg-linear-to-br from-cta-primary/5 via-transparent to-cta-primary/5 relative border border-white/20 backdrop-blur-2xl rounded-xl px-5 py-6 mt-4">
                         <h2 class="flex gap-2 items-center text-text-primary font-semibold text-2xl">Quick Info</h2>
                         <div class="mt-2 text-[12px] max-lg:text-sm max-sm:text-xs">
                             <div class="mt-3 text-text-secondary flex gap-7 w-fit">
@@ -214,7 +235,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Trailer and screenshots -->
         <section class="mt-5">
             <div class="container mx-auto">
@@ -223,8 +244,10 @@
                         <h2 class="flex gap-2 items-center text-text-primary font-semibold text-2xl">Trailers</h2>
                         <div class="w-full mt-2 rounded-xl overflow-hidden relative group cursor-pointer">
                             <video class="aspect-video object-cover w-full page-trailer"></video>
-                            <div class="group-hover:opacity-100! opacity-0 transition-opacity duration-300 flex items-center justify-center text-white absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black/50">
-                                <button class="flex items-center justify-center bg-cta-primary hover:bg-cta-hover max-sm:w-12 max-sm:h-12 w-15 h-15 rounded-full transition-colors duration-300 z-10 cursor-pointer play-trailer-btn">
+                            <div
+                                class="group-hover:opacity-100! opacity-0 transition-opacity duration-300 flex items-center justify-center text-white absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black/50">
+                                <button
+                                    class="flex items-center justify-center bg-cta-primary hover:bg-cta-hover max-sm:w-12 max-sm:h-12 w-15 h-15 rounded-full transition-colors duration-300 z-10 cursor-pointer play-trailer-btn">
                                     <svg class="size-10 max-sm:size-6" viewBox="0 0 24 24" id="play">
                                         <path fill="currentColor"
                                             d="M15.0733 5.20654C13.3412 4.21896 11.9958 3.45183 10.9031 2.95418C9.80638 2.45466 8.85435 2.17257 7.92862 2.26865C6.45941 2.42116 5.1219 3.18242 4.25027 4.36721C3.69972 5.11557 3.47048 6.07608 3.36002 7.26521C3.24999 8.44959 3.25 9.98465 3.25 11.9588V12.0411C3.24999 14.0153 3.24999 15.5504 3.36002 16.7347C3.47048 17.9239 3.69972 18.8844 4.25027 19.6327C5.1219 20.8175 6.45941 21.5788 7.92862 21.7313C8.85435 21.8274 9.80638 21.5453 10.9031 21.0458C11.9958 20.5481 13.3412 19.781 15.0732 18.7934L15.1435 18.7533C16.8755 17.7658 18.2209 16.9987 19.2038 16.3129C20.1894 15.6252 20.916 14.9503 21.297 14.1052C21.901 12.7654 21.901 11.2346 21.297 9.89473C20.916 9.04969 20.1894 8.37477 19.2038 7.68703C18.2209 7.00126 16.8755 6.23412 15.1435 5.24661L15.0733 5.20654Z">
@@ -238,25 +261,29 @@
                     <div class="col-span-1 max-lg:col-span-2">
                         <h2 class="flex gap-2 items-center text-text-primary font-semibold text-2xl">Scrreenshots</h2>
                         <div class="mt-2 grid grid-cols-2 gap-2 w-full h-[373.5px]">
-                            <div class="col-span-1 overflow-hidden rounded-xl aspect-video w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
+                            <div
+                                class="col-span-1 overflow-hidden rounded-xl aspect-video w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
                                 <img class="w-full h-full page-screenshot opacity-0">
                                 <div
                                     class="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/30 transition-opacity duration-300">
                                 </div>
                             </div>
-                            <div class="col-span-1 overflow-hidden rounded-xl aspect-video h-full w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
+                            <div
+                                class="col-span-1 overflow-hidden rounded-xl aspect-video h-full w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
                                 <img class="w-full h-full page-screenshot opacity-0">
                                 <div
                                     class="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/30 transition-opacity duration-300">
                                 </div>
                             </div>
-                            <div class="col-span-1 overflow-hidden rounded-xl aspect-video h-full w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
+                            <div
+                                class="col-span-1 overflow-hidden rounded-xl aspect-video h-full w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
                                 <img class="w-full h-full page-screenshot opacity-0">
                                 <div
                                     class="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/30 transition-opacity duration-300">
                                 </div>
                             </div>
-                            <div class="col-span-1 overflow-hidden rounded-xl aspect-video h-full w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
+                            <div
+                                class="col-span-1 overflow-hidden rounded-xl aspect-video h-full w-full relative group  bg-gray-900 animate-pulse cursor-pointer">
                                 <img class="w-full h-full page-screenshot opacity-0">
                                 <div
                                     class="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/30 transition-opacity duration-300">
@@ -321,7 +348,7 @@
                                     class="col-span-1 mt-2 flex items-center justify-between bg-input-bg/50 text-text-secondary border-2 border-input-border/50 rounded-xl px-3 py-3">
                                     <p>Spoil</p>
                                     <label for="spoil-checkbox"
-                                        class="bg-bg-primary w-10 h-5 rounded-full cursor-pointer relative transition-colors duration-300 before:absolute before:transition-normal before:duration-300 before:left-1  before:top-0 before:bottom-0 before:my-auto before:w-4 before:h-4 before:rounded-full before:bg-input-border spoil-active">
+                                        class="bg-bg-primary w-10 h-5 rounded-full cursor-pointer relative transition-colors duration-300 before:absolute before:transition-normal before:duration-300 before:left-1  before:top-0 before:bottom-0 before:my-auto before:w-4 before:h-4 before:rounded-full before:bg-input-border spoil-label">
                                         <input id="spoil-checkbox" class="w-full" type="checkbox" hidden>
                                     </label>
                                 </div>
@@ -330,10 +357,10 @@
                             <div
                                 class="col-span-2 max-lg:col-span-3 max-md:col-span-3 h-50 relative text-text-secondary hover:border-input-border-hover focus-within:border-input-border-focus focus-within:shadow-[0_0_20px_rgba(139,92,246,.2)] transition-normal duration-300  bg-input-bg/50 px-3 py-3 rounded-xl border-2 border-input-border/50">
                                 <textarea
-                                    class="w-full h-full outline-hidden resize-none placeholder:text-text-secondary custom-scroll"
+                                    class="w-full h-full outline-hidden resize-none placeholder:text-text-secondary custom-scroll comment-input"
                                     placeholder="Share your thoughts about this series..."></textarea>
                                 <button
-                                    class="absolute right-7 bottom-2 bg-cta-primary hover:bg-cta-hover cursor-pointer rounded-xl text-text-primary transition-colors duration-300 w-30 h-10">Submit</button>
+                                    class="absolute right-7 bottom-2 bg-cta-primary hover:bg-cta-hover cursor-pointer rounded-xl text-text-primary transition-colors duration-300 w-30 h-10 submit-comment">Submit</button>
                             </div>
                         </form>
                     </div>

@@ -7,9 +7,9 @@ const fetchMovieDataAndChangeContent = async (endpoint) => {
   try{
     const totalData = await Promise.all([apiRequest(endpoint , movieSlug), apiRequest("/api/discover/similar",movieSlug)])   
     createCards('.similar-series-movies', totalData[1] , true) 
-    const { title , banner , bannerDescription , cast , director , duration , genres , overview , poster , rating , releaseYear , screenshots , trailer , type , seasons} = totalData[0]
+    const { title , slug , banner , bannerDescription , cast , director , duration , genres , overview , poster , rating , releaseYear , screenshots , trailer , type , seasons} = totalData[0]
     document.title = `${title} | Cinevo`
-    changePageContent(title , banner , bannerDescription , cast , director , duration , genres , overview , poster , rating , releaseYear , screenshots , trailer , type , seasons)
+    changePageContent(title , slug , banner , bannerDescription , cast , director , duration , genres , overview , poster , rating , releaseYear , screenshots , trailer , type , seasons)
 
   }catch(err){
     console.log(err);

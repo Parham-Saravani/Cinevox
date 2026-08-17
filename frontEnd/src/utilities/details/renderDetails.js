@@ -2,7 +2,7 @@ import changeDurationFormat from "./timeFormatter.js";
 import seasonHandler from "./renderSeasons.js";
 import createCasts from "./renderCasts.js";
 import setLoaderToTrailer from "./trailerLoader.js";
-
+import "./comments/addComments.js"
 const elements = {
   bannerEl: document.querySelector(".page-banner"),
   posterEl: document.querySelector(".page-poster"),
@@ -13,12 +13,13 @@ const elements = {
   genresEl: document.querySelector(".page-genres"),
   ratingEl: document.querySelector(".page-rating"),
   directoreEl: document.querySelector(".page-directore"),
-  durationEl : document.querySelector(".page-duration")
-
+  durationEl: document.querySelector(".page-duration"),
+  submitCommentBtn: document.querySelector(".submit-comment"),
 };
 
 const changePageContent = (
   title,
+  slug,
   banner,
   bannerDescription,
   cast,
@@ -34,6 +35,7 @@ const changePageContent = (
   type,
   seasons,
 ) => {
+  elements.submitCommentBtn.setAttribute('data-title', slug)
   elements.bannerEl.setAttribute("src", `public${banner}`);
   elements.bannerEl.setAttribute("alt", `${title} banner`);
   removeLoaderFromBanner();
@@ -49,7 +51,7 @@ const changePageContent = (
   createCasts(cast);
   setLoaderToCasts();
   elements.releaseEl.textContent = releaseYear;
-  elements.durationEl.textContent =   changeDurationFormat(duration, type);
+  elements.durationEl.textContent = changeDurationFormat(duration, type);
   createGenres(genres);
   elements.ratingEl.textContent = `${rating} / 10`;
   elements.directoreEl.textContent = director;

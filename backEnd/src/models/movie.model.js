@@ -13,12 +13,12 @@ const movieSchema = new mongoose.Schema(
     overview: String,
     bannerDescription: String,
 
-    releaseYear: String,
+    releaseYear: Number,
 
     duration: String,
     runtime: String,
 
-    rating: String,
+    rating: Number,
     ageRating: String,
 
     genres: [String],
