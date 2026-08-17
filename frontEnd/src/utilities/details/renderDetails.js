@@ -13,6 +13,8 @@ const elements = {
   genresEl: document.querySelector(".page-genres"),
   ratingEl: document.querySelector(".page-rating"),
   directoreEl: document.querySelector(".page-directore"),
+  durationEl : document.querySelector(".page-duration")
+
 };
 
 const changePageContent = (
@@ -47,7 +49,7 @@ const changePageContent = (
   createCasts(cast);
   setLoaderToCasts();
   elements.releaseEl.textContent = releaseYear;
-  changeDurationFormat(duration, type);
+  elements.durationEl.textContent =   changeDurationFormat(duration, type);
   createGenres(genres);
   elements.ratingEl.textContent = `${rating} / 10`;
   elements.directoreEl.textContent = director;
