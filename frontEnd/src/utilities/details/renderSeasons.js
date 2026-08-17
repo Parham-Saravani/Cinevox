@@ -82,11 +82,14 @@ const showActiveSeasonEpisodes = (season) => {
   activeSeason.classList.remove("active-season-container", "animate-fadeIn");
   activeSeason.classList.add("animate-fadeOut");
   setTimeout(() => {
-    activeSeason.classList.replace("animate-fadeOut", "hidden");
-    const containerToBeActive = document.querySelector(`.${season}`);
-    containerToBeActive.classList.remove("hidden");
+    activeSeason.classList.add("hidden");
+    activeSeason.classList.remove("animate-fadeOut");
+    setTimeout(() => {
+      const containerToBeActive = document.querySelector(`.${season}`);
+      containerToBeActive.classList.remove("hidden");
       containerToBeActive.classList.add("animate-fadeIn");
       containerToBeActive.classList.add("active-season-container");
+    }, 0);
   }, 300);
 };
 elements.seasonContainer?.addEventListener("click", changeActiveSeason);

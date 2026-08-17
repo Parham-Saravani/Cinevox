@@ -1,6 +1,6 @@
-const Card = (title, slug, type, genres, poster) => {
+const Card = (title, slug, type, genres, poster , isSlider) => {
   return `
-    <div class="group w-full">
+    <div class="group ${isSlider ? 'swiper-slide' : ""} ${isSlider ? 'w-45!' : 'w-full'}">
         <a href="${type === "movie" ? `/movie.html?title=${slug}` : `/serie.html?title=${slug}`}" class="relative block rounded-xl overflow-hidden">
             <img class="object-cover" src="public${poster}" alt="" loading="lazy">
             <div class="absolute opacity-0 group-hover:opacity-100 transition-normal duration-300 top-0 w-full h-full bg-black/50 z-10">
