@@ -1,3 +1,4 @@
+import toastHandler from "../../toast/toast";
 const spoilLabel = document.querySelector(".spoil-label");
 const spoilCheckbox = document.querySelector("#spoil-checkbox");
 const submitCommentBtn = document.querySelector(".submit-comment");
@@ -8,8 +9,10 @@ const addNewCommnets = (event) => {
   const commentText = commentInput.value.trim();
   if (commentText.length <= 15) {
     console.log("type more than 15 letters");
+    toastHandler("You have to enter at least 15 character!", "fail");
   } else {
     console.log("Submited");
+    toastHandler("Your comment submited.", "success");
   }
 };
 

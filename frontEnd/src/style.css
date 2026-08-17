@@ -151,6 +151,24 @@
 }
 /* Series Page */
 
+
+
+/* Toast */
+.toast-hide{
+  left: -20rem;
+}
+.toast-success{
+  color: oklch(52.7% 0.154 150.069);
+}
+.toast-success .toast-icon-container{
+  background-color: oklch(62.7% 0.194 149.214 / 10%);
+}
+.toast-fail{
+  color: oklch(50.5% 0.213 27.518);
+}
+.toast-fail .toast-icon-container{
+  background-color: oklch(57.7% 0.245 27.325 / 10%);
+}
 /* Fonts */
 @font-face {
   font-family: "Poppins";

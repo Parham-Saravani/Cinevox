@@ -32,46 +32,14 @@ createSlider(".cast-slider", {
 createSlider(".seasons-slider", {
   direction: "horizontal",
   grabCursor: true,
-  slidesPerView: 5,
-  spaceBetween: 20,
-  breakpoints: {
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 6,
-      spaceBetween: 30,
-    },
-    1024: {
-      slidesPerView: 5,
-      spaceBetween: 40,
-    },
-    1280: {
-      slidesPerView: "auto",
-    },
-  },
+  slidesPerView: "auto",
+  spaceBetween: 50,
+  
 });
 createSlider(".similar-series-slider", {
   direction: "horizontal",
   grabCursor: true,
-  slidesPerView: 3,
-  spaceBetween: 20,
-  breakpoints: {
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 6,
-      spaceBetween: 30,
-    },
-    1024: {
-      slidesPerView: 5,
-      spaceBetween: 40,
-    },
-    1280: {
-      slidesPerView: "auto",
-    },
-  },
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  
 });

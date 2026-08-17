@@ -14,7 +14,7 @@ const seasonHandler = (seasons) => {
     elements.seasonContainer.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="swiper-slide w-fit! mr-2!">
+      <div class="swiper-slide w-fit!">
           <button class="hover:border-cta-primary/50 hover:bg-cta-primary/50 transition-colors duration-300 cursor-pointer border-2 text-sm border-input-border rounded-xl px-3 py-1 text-text-primary season-item ${index ? "" : "active-season"}" data-season="season-${index + 1}">${season.title}</button>
       </div>
       `,

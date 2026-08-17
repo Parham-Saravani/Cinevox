@@ -115,7 +115,8 @@ const removeLoaderFromPoster = (poster) => {
 };
 const removeLoaderFromBanner = () => {
   elements.bannerEl.addEventListener("load", () => {
-    elements.bannerEl.classList.remove("hidden");
+    elements.bannerEl.classList.remove("bg-gray-900", 'animate-pulse');
+    elements.bannerEl.classList.add('animate-fadeIn');
   });
 };
 export default changePageContent;

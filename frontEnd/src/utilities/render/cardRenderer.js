@@ -1,6 +1,7 @@
 import Card from "../../components/cards/card.js";
 const createCards = (itemClass, data, isSlider = false) => {
   const container = document.querySelector(itemClass);
+  container.innerHTML = "";
   data.forEach((item) => {
     const { title, slug, type, genres, poster } = item;
     container.insertAdjacentHTML(
@@ -11,7 +12,8 @@ const createCards = (itemClass, data, isSlider = false) => {
   document.querySelectorAll(".card-image").forEach((item) => {
     item.addEventListener("load", () => {
       item.classList.remove("animate-pulse", "bg-gray-900");
-      item.nextElementSibling.classList.remove('hidden')
+      item.classList.add("animate-fadeIn");
+      item.nextElementSibling.classList.remove("hidden");
     });
   });
 };
