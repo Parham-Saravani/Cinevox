@@ -64,7 +64,7 @@ const AuthSignupContent = () => {
                     <button class="max-sm:text-xs mt-5 font-bold text-sm text-center w-full h-12 rounded-xl bg-cta-primary hover:bg-cta-hover transform-colors duration-300 cursor-pointer signup-btn disabled:bg-cta-primary/40 disabled:cursor-default" type="button">Sign Up</button>
                 </form>
 
-                <p class="max-sm:text-[10px] text-xs mt-10 text-center">Already have an account?<span class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Login</span>
+                <p class="max-sm:text-[10px] text-xs mt-10 text-center">Already have an account?<span class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer login-footer-btn">Login</span>
                 </p>
   `;
 };

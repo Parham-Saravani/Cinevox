@@ -28,13 +28,13 @@ const changeContentHandler = (status) => {
   switch (status) {
     case "login":
       changeContent(AuthLoginContent());
-      loginOperation()
-      document.title = 'Login | Cinevo'
+      loginOperation();
+      document.title = "Login | Cinevo";
       break;
     case "signup":
       changeContent(AuthSignupContent());
       signupOperation();
-      document.title = 'Signup | Cinevo'
+      document.title = "Signup | Cinevo";
       break;
   }
 };
@@ -45,3 +45,4 @@ const changeContent = (content) => {
 items.forEach((item) => {
   item.addEventListener("click", authHeaderHandler);
 });
+export default changeContentHandler;

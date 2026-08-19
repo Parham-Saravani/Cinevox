@@ -65,7 +65,7 @@ const AuthLoginContent = () => {
                     <button class="font-bold max-sm:text-xs text-sm mt-4 text-center w-full h-12 rounded-xl bg-cta-primary hover:bg-cta-hover transform-colors duration-300 cursor-pointer disabled:bg-cta-primary/40 disabled:cursor-default login-btn" type="button">Login</button>
                 </form>
 
-                <p class="text-xs max-sm:text-[10px] mt-10 text-center">Don't have an account?<span class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Sign Up</span></p>
+                <p class="text-xs max-sm:text-[10px] mt-10 text-center">Don't have an account?<span class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer signup-footer-btn">Sign Up</span></p>
     `;
 };
 export default AuthLoginContent;

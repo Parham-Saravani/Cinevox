@@ -2,7 +2,7 @@ import toastHandler from "../toast/toast.js";
 import removeLoading from "./removeLoading.js";
 const showOperationStatus = (target, message) => {
   if (message === "USER_CREATED" || message === "LOGIN_SUCCESSFUL") {
-    // location.replace("/");
+    location.replace("/");
   } else if (message === "USERNAME_TAKEN") {
     toastHandler("Username taken!", "fail");
     removeLoading(target, "Sign Up");

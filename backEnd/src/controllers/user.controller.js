@@ -11,7 +11,7 @@ const registerNewUser = async (req, res) => {
     password: userPassword,
   } = req.body;
 
-  if ((userUsername, emailRegex.test(userEmail), userPassword.length >= 2)) {
+  if (userUsername && emailRegex.test(userEmail) && userPassword.length >= 2) {
     try {
       const isEmailUsed = await User.findOne({ email: userEmail });
       const isUsernameTaken = await User.findOne({ username: userUsername });
@@ -21,10 +21,12 @@ const registerNewUser = async (req, res) => {
       } else if (isEmailUsed) {
         throw new Error("EMAIL_USED");
       } else {
-        const newUser = await User.create({ username: userUsername, email: userEmail, password: hashedPassword, });
+        const newUser = await User.create({
+          username: userUsername,
+          email: userEmail,
+          password: hashedPassword,
+        });
         const token = await createToken(newUser._id);
-        console.log(token);
-        
         res.status(201).json({ message: "USER_CREATED", token });
       }
     } catch (error) {
@@ -46,6 +48,7 @@ const loginOperation = async (req, res) => {
           if (user.isLogin) {
             throw new Error("ALREADY_LOGIN");
           } else {
+            User.updateOne({ _id: user._id }, { isLogin: true });
             const token = await createToken(user._id);
             res.json({ message: "LOGIN_SUCCESSFUL", token });
           }

@@ -9,7 +9,7 @@ const setClickEvent = () => {
   loginBtn.addEventListener("click", loginHandler);
 };
 
-const loginHandler = async (event) => {
+const loginHandler = async (event) => { 
   event.preventDefault()
   const { email, password, remembermeEl, emailAlertEl, passwordAlertEl } = takeValues();
   let isValid = false;
@@ -19,10 +19,14 @@ const loginHandler = async (event) => {
   if(isValid){
     addLoadingState(event.target)
     const data = await apiRequest('/api/user/login', null , 'POST', {email , password})  
-    if(data.message === 'LOGIN_SUCCESSFUL'){
-        createCookie('auth-token', data.token, true)
-    }  
+    console.log(data);
+    
     showOperationStatus(event.target , data.message)
+    if(data.message === 'LOGIN_SUCCESSFUL' && remembermeEl.checked){
+      createCookie('auth-token', data.token, true)
+    }else if(data.message === 'LOGIN_SUCCESSFUL'){
+      createCookie('auth-token', data.token ,false)
+    }
   }
 };
 
