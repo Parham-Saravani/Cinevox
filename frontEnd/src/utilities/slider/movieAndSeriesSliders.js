@@ -25,7 +25,7 @@ createSlider(".cast-slider", {
       slidesPerView: 11,
     },
     1280: {
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
     },
   },
 });
@@ -33,13 +33,11 @@ createSlider(".seasons-slider", {
   direction: "horizontal",
   grabCursor: true,
   slidesPerView: "auto",
-  spaceBetween: 50,
-  
+  spaceBetween: 10,
 });
 createSlider(".similar-series-slider", {
   direction: "horizontal",
   grabCursor: true,
   slidesPerView: "auto",
   spaceBetween: 10,
-  
 });

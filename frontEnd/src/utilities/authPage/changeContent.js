@@ -1,10 +1,11 @@
 import AuthLoginContent from "../../components/auth/login.js";
 import AuthSignupContent from "../../components/auth/signup.js";
+import signupOperation from "./signup.js";
+import loginOperation from "./login.js";
 
 const items = document.querySelectorAll(".auth-header-item");
 const contentContainer = document.querySelector(".auth-content");
 const authForm = document.querySelector(".auth-form");
-
 const authHeaderHandler = (event) => {
   const { target } = event;
   const status = checkIsItemAlreadyActive(target);
@@ -27,9 +28,13 @@ const changeContentHandler = (status) => {
   switch (status) {
     case "login":
       changeContent(AuthLoginContent());
+      loginOperation()
+      document.title = 'Login | Cinevo'
       break;
     case "signup":
       changeContent(AuthSignupContent());
+      signupOperation();
+      document.title = 'Signup | Cinevo'
       break;
   }
 };

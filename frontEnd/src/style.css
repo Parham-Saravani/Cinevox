@@ -151,24 +151,69 @@
 }
 /* Series Page */
 
-
-
 /* Toast */
-.toast-hide{
-  left: -20rem;
+.toast-hide {
+  left: -30rem;
 }
-.toast-success{
+.toast-success {
   color: oklch(52.7% 0.154 150.069);
 }
-.toast-success .toast-icon-container{
+.toast-success .toast-icon-container {
   background-color: oklch(62.7% 0.194 149.214 / 10%);
 }
-.toast-fail{
+.toast-fail {
   color: oklch(50.5% 0.213 27.518);
 }
-.toast-fail .toast-icon-container{
+.toast-fail .toast-icon-container {
   background-color: oklch(57.7% 0.245 27.325 / 10%);
 }
+
+/* Empty State Eyes */
+.eyes-container {
+  display: flex;
+  gap: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.eyes-container:hover {
+  transform: scale(1.05);
+}
+.eye {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.pupil {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 30% 30%, #4a5568, #1a202c);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+}
+.pupil::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  opacity: 0.6;
+}
+
 /* Fonts */
 @font-face {
   font-family: "Poppins";
@@ -213,6 +258,13 @@
     opacity: 0;
   }
 }
+@keyframes loading {
+    0%  {box-shadow: 20px 0 rgba(124, 77, 255, 0.3), -20px 0 var(--color-cta-primary) ;background:  rgba(124, 77, 255, 0.3)}
+    33% {box-shadow: 20px 0 rgba(124, 77, 255, 0.3), -20px 0 var(--color-cta-primary);background: var(--color-cta-primary)}
+    66% {box-shadow: 20px 0 var(--color-cta-primary),-20px 0 rgba(124, 77, 255, 0.3); background: var(--color-cta-primary)}
+    100%{box-shadow: 20px 0 var(--color-cta-primary),-20px 0 rgba(124, 77, 255, 0.3); background: rgba(124, 77, 255, 0.3) }
+}
+
 @theme {
   /*
     - app color pallete - 
@@ -238,6 +290,7 @@
   /* Animations */
   --animate-fadeIn: fadeIn 300ms ease-in;
   --animate-fadeOut: fadeOut 300ms ease-out;
+  --animate-loader: loading 600ms infinite linear alternate;
 }
 
 @utility container {

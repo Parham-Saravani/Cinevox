@@ -5,7 +5,7 @@ const renderBanners = (data) => {
   const container = document.querySelector(".hero-banner");
   if (data.length) {
     container.innerHTML = "";
-    data.forEach((item) => {
+    data.forEach((item) => {      
       container.insertAdjacentHTML(
         "beforeend",
         `
@@ -17,13 +17,13 @@ const renderBanners = (data) => {
                   <h1 class="text-white text-6xl font-bold max-lg:text-4xl max-sm:text-2xl">${item.title}</h1>
                   <p class="mt-2 text-text-secondary w-140 max-sm:w-full max-md:text-[13px] max-md:line-clamp-3 max-sm:line-clamp-2">${item.bannerDescription}</p>
                   <div class="mt-5 flex">
-                    <button class="flex max-md:gap-1 gap-2 items-center justify-center bg-cta-primary hover:bg-cta-hover text-text-primary font-semibold w-45 max-md:w-fit text-sm max-md:text-[10px] max-md:px-3 py-3 max-md:py-0 transition-colors duration-300 cursor-pointer rounded-xl" data-slug=${item.slug}>
+                    <a href="${item.type === 'movie' ? `movie.html?title=${item.slug}`: `/serie.html?title=${item.slug}`}" class="flex max-md:gap-1 gap-2 items-center justify-center bg-cta-primary hover:bg-cta-hover text-text-primary font-semibold w-45 max-md:w-fit text-sm max-md:text-[10px] max-md:px-3 py-3 max-md:py-0 transition-colors duration-300 cursor-pointer rounded-xl" data-slug=${item.slug}>
                       <svg class="size-6 max-md:size-4" viewBox="0 0 24 24" id="play">
                         <path fill="currentColor"
                           d="M15.0733 5.20654C13.3412 4.21896 11.9958 3.45183 10.9031 2.95418C9.80638 2.45466 8.85435 2.17257 7.92862 2.26865C6.45941 2.42116 5.1219 3.18242 4.25027 4.36721C3.69972 5.11557 3.47048 6.07608 3.36002 7.26521C3.24999 8.44959 3.25 9.98465 3.25 11.9588V12.0411C3.24999 14.0153 3.24999 15.5504 3.36002 16.7347C3.47048 17.9239 3.69972 18.8844 4.25027 19.6327C5.1219 20.8175 6.45941 21.5788 7.92862 21.7313C8.85435 21.8274 9.80638 21.5453 10.9031 21.0458C11.9958 20.5481 13.3412 19.781 15.0732 18.7934L15.1435 18.7533C16.8755 17.7658 18.2209 16.9987 19.2038 16.3129C20.1894 15.6252 20.916 14.9503 21.297 14.1052C21.901 12.7654 21.901 11.2346 21.297 9.89473C20.916 9.04969 20.1894 8.37477 19.2038 7.68703C18.2209 7.00126 16.8755 6.23412 15.1435 5.24661L15.0733 5.20654Z">
                         </path>
                       </svg>
-                      Watch Now</button>
+                      Watch Now</a>
                     <button class="flex items-center justify-center text-text-secondary border-input-border hover:bg-input-border/50 transition-colors duration-300 ml-4 rounded-xl w-45 max-md:w-fit max-md:px-3 py-3 text-sm max-md:text-[10px] border-2  cursor-pointer">
                       <svg class="size-6 max-md:size-4" viewBox="0 0 24 24" id="plus">
                         <path fill="currentColor"

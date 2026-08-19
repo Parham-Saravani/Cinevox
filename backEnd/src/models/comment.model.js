@@ -1,11 +1,15 @@
 import mongoose from "mongoose";
 const commentSchema = new mongoose.Schema(
   {
-    commentFor: { type: String, required: true },
-    author: { type: String, required: true },
-    text: { type: String, required: true },
-    isSpoil: { type: Boolean, default: false },
-    status: { type: String, enum: ["pending", "approved"], default: "pending" },
+    contentID: { type: String, required: true },
+    comments: [
+      {
+        author: String,
+        text: String,
+        isSpoil: Boolean,
+        createdAt: { type: Date, default: Date.now },
+      },
+    ],
   },
   { timestamps: true },
 );

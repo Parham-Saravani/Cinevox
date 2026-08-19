@@ -4,8 +4,6 @@ import Banner from "../models/banner.model.js";
 
 const createNewBanner = async (req, res) => {
   const currentSlug = req.params.slug;
-  console.log(currentSlug);
-
   try {
     const current =
       (await Serie.findOne(
@@ -20,6 +18,7 @@ const createNewBanner = async (req, res) => {
           genres: true,
           rating: true,
           duration: true,
+          type: true,
         },
       )) ||
       (await Movie.findOne(
@@ -34,6 +33,7 @@ const createNewBanner = async (req, res) => {
           genres: true,
           rating: true,
           duration: true,
+          type: true,
         },
       ));
 
@@ -46,9 +46,11 @@ const createNewBanner = async (req, res) => {
       genres: current.genres,
       rating: current.rating,
       duration: current.duration,
+      type: current.type,
     });
     res.json({ message: "CREATED" });
   } catch (error) {
+    console.log(error);
     res.json({ message: "NOT_CREATED" });
   }
 };
@@ -61,4 +63,4 @@ const takeAllBanners = async (req, res) => {
   }
 };
 
-export { createNewBanner , takeAllBanners};
+export { createNewBanner, takeAllBanners };

@@ -8,25 +8,36 @@
 </head>
 
 <body class="flex text-sm justify-center items-center h-screen bg-[url('./assets/images/auth-background.png')] bg-cover bg-center relative font-poppins">
+    <!-- Toast -->
+    <div class="transition-left duration-300 order-1 fixed top-3 left-3 w-95 z-20 bg-input-bg px-3 py-3 border border-white/10 rounded-xl toast toast-hide toast-fail">
+        <div class="flex items-center">
+            <span class="flex justify-center items-center bg-input-border/50 w-8 h-8 rounded-md toast-icon-container">
+                <svg class="size-5.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="alert">
+                    <circle cx="64" cy="64" r="48" stroke="currentColor" stroke-width="7" fill="none"></circle>
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="7" d="M64 40L64 69" fill=""></path>
+                    <path fill="currentColor"
+                        d="M69 82C69 84.7614 66.7614 87 64 87C61.2386 87 59 84.7614 59 82C59 79.2386 61.2386 77 64 77C66.7614 77 69 79.2386 69 82Z">
+                    </path>
+                </svg>
+            </span>
+            <p class="ml-3 text-[12px] toast-message">Your comment submited.</p>
+        </div>
+    </div>
 
-    <main class="relative w-full h-full flex items-center justify-center auth-overlay">
+    <main class="relative max-sm:px-5 w-full h-full flex items-center justify-center auth-overlay">
         <section class="px-5 py-5 w-110 bg-input-bg/60 backdrop-blur-xl rounded-xl border border-white/10 auth-form">
             <!-- Navigations -->
-            <header class="flex items-center gap-2 w-70 mx-auto text-text-secondary">
-                <button
-                    class="w-[50%] py-3 font-semibold border-b-2 border-transparent hover:border-cta-primary hover:text-cta-hover cursor-pointer transition-colors duration-300 auth-header-item auth-header-active" data-status="login">Login</button>
-                <button
-                    class="w-[50%] py-3 font-semibold border-b-2 border-transparent hover:border-cta-primary hover:text-cta-hover cursor-pointer transition-colors duration-300 auth-header-item" data-status="signup">Sign
-                    Up</button>
+            <header class="max-sm:text-xs flex items-center gap-2 w-70 mx-auto text-text-secondary">
+                <button class="w-[50%] py-3 font-semibold border-b-2 border-transparent hover:border-cta-primary hover:text-cta-hover cursor-pointer transition-colors duration-300 auth-header-item auth-header-active" data-status="login">Login</button>
+                <button class="w-[50%] py-3 font-semibold border-b-2 border-transparent hover:border-cta-primary hover:text-cta-hover cursor-pointer transition-colors duration-300 auth-header-item" data-status="signup">Sign Up</button>
             </header>
 
             <main class="mt-10 text-text-primary auth-content">
-                <h2 class="font-bold text-2xl">Welcome Back</h2>
-                <p class="text-text-secondary text-sm">Glad to see you again! Please login to continue</p>
+                <h2 class="font-bold text-2xl max-sm:text-xl">Welcome Back</h2>
+                <p class="text-text-secondary text-sm max-sm:text-xs">Glad to see you again! Please login to continue</p>
 
                 <form class="mt-7">
-                    <div
-                        class="relative mt-2 flex items-center bg-input-bg text-text-secondary border-2 border-input-border/50 rounded-xl h-14 focus-within:border-input-border-focus transition-colors duration-300">
+                    <div class="relative mt-2 flex items-center bg-input-bg text-text-secondary border-2 border-input-border/50 rounded-xl h-14 focus-within:border-input-border-focus transition-colors duration-300">
                         <svg class="absolute size-5 left-2 bottom-0 top-0 my-auto" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24" id="email">
                             <g>
@@ -35,9 +46,9 @@
                                     fill="currentColor"></path>
                             </g>
                         </svg>
-                        <input class="px-6 h-full w-full ml-3 outline-hidden placeholder:text-text-secondary"
-                            placeholder="Enter your email" type="text">
+                        <input class="max-sm:text-xs pl-9 pr-6 h-full w-full rounded-xl outline-hidden placeholder:text-text-secondary login-email" placeholder="Enter your email" type="text">
                     </div>
+                    <p class="ml-1 max-sm:text-[10px] mt-1 text-red-600 text-xs email-alert hidden">Enter a valid Email!</p>
 
                     <div
                         class="relative mt-2 flex items-center bg-input-bg text-text-secondary border-2 border-input-border/50 rounded-xl h-14 focus-within:border-input-border-focus transition-colors duration-300">
@@ -52,11 +63,8 @@
                                     fill="currentColor"></path>
                             </g>
                         </svg>
-                        <input
-                            class="pr-9 pt-1 pl-9 h-full rounded-xl w-full outline-hidden placeholder:text-text-secondary"
-                            placeholder="Enter your password" type="text">
-                        <button
-                            class="absolute right-2 cursor-pointer text-text-secondary hover:text-text-primary transition-colors duration-300">
+                        <input class="max-sm:text-xs pr-9 pt-1 pl-9 h-full rounded-xl w-full outline-hidden placeholder:text-text-secondary password-input login-password" placeholder="Enter your password" type="password">
+                        <button class="absolute right-2 cursor-pointer text-text-secondary hover:text-text-primary transition-colors duration-300 show-password">
                             <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="eye">
                                 <rect width="256" height="256" fill="none"></rect>
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -68,12 +76,11 @@
                             </svg>
                         </button>
                     </div>
+                    <p class="ml-1 max-sm:text-[10px] mt-1 text-red-600 text-xs password-alert hidden">Password must be at least 8 characters!</p>
 
                     <div class="mt-3 flex items-center justify-between">
-                        <div class="flex items-center text-xs">
-                            <label
-                                class="mr-1.5 w-4 h-4 text-transparent block rounded-sm bg-input-border/50 cursor-pointer remember-checkbox"
-                                for="remember-checkbox">
+                        <div class="flex items-center text-xs max-sm:text-[10px]">
+                            <label class="mr-1.5 w-4 h-4 text-transparent block rounded-sm bg-input-border/50 cursor-pointer remember-checkbox transition-colors duration-300" for="remember-checkbox">
                                 <input id="remember-checkbox" class="mr-2" type="checkbox" hidden>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="check">
                                     <path
@@ -84,19 +91,16 @@
                             Remember me
                         </div>
                         <span
-                            class="text-xs text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Forgot
+                            class="text-xs max-sm:text-[10px] text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Forgot
                             Password?</span>
                     </div>
 
-                    <button
-                        class="font-bold text-sm mt-4 text-center w-full h-12 rounded-xl bg-cta-primary hover:bg-cta-hover transform-colors duration-300 cursor-pointer"
-                        type="submit">Login</button>
+                    <button class="font-bold max-sm:text-xs text-sm mt-4 text-center w-full h-12 rounded-xl bg-cta-primary hover:bg-cta-hover transform-colors duration-300 cursor-pointer disabled:bg-cta-primary/40 disabled:cursor-default login-btn" type="button">Login</button>
                 </form>
 
-                <p class="text-xs mt-10 text-center">Don't have an account?<span
-                        class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Sign
-                        Up</span></p>
+                <p class="text-xs max-sm:text-[10px] mt-10 text-center">Don't have an account?<span class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Sign Up</span></p>
             </main>
+
         </section>
     </main>
     <script type="module" src="src/utilities/scripts/auth.js"></script>

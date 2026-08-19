@@ -1,11 +1,10 @@
 const AuthLoginContent = () => {
   return `
-    <h2 class="font-bold text-2xl">Welcome Back</h2>
-                <p class="text-text-secondary text-sm">Glad to see you again! Please login to continue</p>
+                <h2 class="font-bold text-2xl max-sm:text-xl">Welcome Back</h2>
+                <p class="text-text-secondary text-sm max-sm:text-xs">Glad to see you again! Please login to continue</p>
 
                 <form class="mt-7">
-                    <div
-                        class="relative mt-2 flex items-center bg-input-bg text-text-secondary border-2 border-input-border/50 rounded-xl h-14 focus-within:border-input-border-focus transition-colors duration-300">
+                    <div class="relative mt-2 flex items-center bg-input-bg text-text-secondary border-2 border-input-border/50 rounded-xl h-14 focus-within:border-input-border-focus transition-colors duration-300">
                         <svg class="absolute size-5 left-2 bottom-0 top-0 my-auto" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24" id="email">
                             <g>
@@ -14,9 +13,9 @@ const AuthLoginContent = () => {
                                     fill="currentColor"></path>
                             </g>
                         </svg>
-                        <input class="px-6 h-full w-full ml-3 outline-hidden placeholder:text-text-secondary"
-                            placeholder="Enter your email" type="text">
+                        <input class="max-sm:text-xs pl-9 pr-6 h-full w-full rounded-xl outline-hidden placeholder:text-text-secondary login-email" placeholder="Enter your email" type="text">
                     </div>
+                    <p class="ml-1 max-sm:text-[10px] mt-1 text-red-600 text-xs email-alert hidden">Enter a valid Email!</p>
 
                     <div
                         class="relative mt-2 flex items-center bg-input-bg text-text-secondary border-2 border-input-border/50 rounded-xl h-14 focus-within:border-input-border-focus transition-colors duration-300">
@@ -31,11 +30,8 @@ const AuthLoginContent = () => {
                                     fill="currentColor"></path>
                             </g>
                         </svg>
-                        <input
-                            class="pr-9 pt-1 pl-9 h-full rounded-xl w-full outline-hidden placeholder:text-text-secondary"
-                            placeholder="Enter your password" type="text">
-                        <button
-                            class="absolute right-2 cursor-pointer text-text-secondary hover:text-text-primary transition-colors duration-300">
+                        <input class="max-sm:text-xs pr-9 pt-1 pl-9 h-full rounded-xl w-full outline-hidden placeholder:text-text-secondary password-input login-password" placeholder="Enter your password" type="password">
+                        <button class="absolute right-2 cursor-pointer text-text-secondary hover:text-text-primary transition-colors duration-300 show-password">
                             <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="eye">
                                 <rect width="256" height="256" fill="none"></rect>
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -47,12 +43,11 @@ const AuthLoginContent = () => {
                             </svg>
                         </button>
                     </div>
+                    <p class="ml-1 max-sm:text-[10px] mt-1 text-red-600 text-xs password-alert hidden">Password must be at least 8 characters!</p>
 
                     <div class="mt-3 flex items-center justify-between">
-                        <div class="flex items-center text-xs">
-                            <label
-                                class="mr-1.5 w-4 h-4 text-transparent block rounded-sm bg-input-border/50 cursor-pointer remember-checkbox"
-                                for="remember-checkbox">
+                        <div class="flex items-center text-xs max-sm:text-[10px]">
+                            <label class="mr-1.5 w-4 h-4 text-transparent block rounded-sm bg-input-border/50 cursor-pointer remember-checkbox transition-colors duration-300" for="remember-checkbox">
                                 <input id="remember-checkbox" class="mr-2" type="checkbox" hidden>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="check">
                                     <path
@@ -63,18 +58,14 @@ const AuthLoginContent = () => {
                             Remember me
                         </div>
                         <span
-                            class="text-xs text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Forgot
+                            class="text-xs max-sm:text-[10px] text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Forgot
                             Password?</span>
                     </div>
 
-                    <button
-                        class="font-bold text-sm mt-4 text-center w-full h-12 rounded-xl bg-cta-primary hover:bg-cta-hover transform-colors duration-300 cursor-pointer"
-                        type="submit">Login</button>
+                    <button class="font-bold max-sm:text-xs text-sm mt-4 text-center w-full h-12 rounded-xl bg-cta-primary hover:bg-cta-hover transform-colors duration-300 cursor-pointer disabled:bg-cta-primary/40 disabled:cursor-default login-btn" type="button">Login</button>
                 </form>
 
-                <p class="text-xs mt-10 text-center">Don't have an account?<span
-                        class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Sign
-                        Up</span></p>
+                <p class="text-xs max-sm:text-[10px] mt-10 text-center">Don't have an account?<span class="ml-1.5 text-cta-primary hover:text-cta-hover transition-colors duration-300 cursor-pointer">Sign Up</span></p>
     `;
 };
 export default AuthLoginContent;

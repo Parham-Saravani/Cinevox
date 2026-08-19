@@ -8,6 +8,7 @@ const bannerSchema = new mongoose.Schema({
   genres: [String],
   rating: String,
   duration: String,
+  type: String,
 });
 
 const Banner = mongoose.model("banners", bannerSchema);

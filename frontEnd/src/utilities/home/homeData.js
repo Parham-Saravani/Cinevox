@@ -11,7 +11,6 @@ const fetchHomeData = async () => {
       apiRequest("/api/discover/popular"),
       apiRequest("/api/discover/recommend"),
     ]);
-    console.log(data[2]);
     
     renderBanners(data[0]);
     handlerSliders(".trending-container", data[1], true);

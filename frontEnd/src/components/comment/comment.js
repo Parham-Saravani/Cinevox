@@ -10,10 +10,14 @@ const Comment = (comment) => {
                 <p class="text-text-secondary ml-6 text-xs">${comment.date}</p>
                                 </div>
             <div class="mt-1 text-text-secondary relative">
-                <p class="px-2 py-2">${comment.text}</p>
-                <div class="absolute inset-0 flex justify-center items-center backdrop-blur-xs comment-spoiler-cover">
-                    <button class="hover:border-cta-primary/50 hover:bg-cta-primary/50 bg-input-border/50 backdrop-blur-3xl transition-colors duration-300 cursor-pointer border-2 text-sm border-input-border rounded-xl px-3 py-1 text-text-primary remove-comment-spoiler-cover-btn">Read</button>
-                </div>
+                <p class="">${comment.text}</p>
+                ${
+                  comment.isSpoil
+                    ? `<div class="absolute -inset-2 flex justify-center items-center backdrop-blur-xs">
+                            <button class="hover:border-cta-primary/50 hover:bg-cta-primary/50 bg-input-border/50 backdrop-blur-3xl transition-colors duration-300 cursor-pointer border-2 text-sm border-input-border rounded-xl px-3 py-1 text-text-primary remove-comment-spoiler-cover-btn">Read</button>
+                        </div>`
+                    : ""
+                }
             </div>
         </div>
     </div>
