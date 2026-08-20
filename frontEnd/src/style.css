@@ -10,7 +10,7 @@
   width: 8px;
 }
 .custom-scroll::-webkit-scrollbar-thumb {
-  background: var(--color-input-border);
+  background: rgba(52 59 86 / 0.2);
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -18,7 +18,7 @@
   -o-border-radius: 1rem;
 }
 .custom-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--color-input-border-hover);
+  background: rgba(52 59 86 / 0.3);
 }
 .custom-scroll::-webkit-scrollbar-track {
   background: transparent;
@@ -259,10 +259,30 @@
   }
 }
 @keyframes loading {
-    0%  {box-shadow: 20px 0 rgba(124, 77, 255, 0.3), -20px 0 var(--color-cta-primary) ;background:  rgba(124, 77, 255, 0.3)}
-    33% {box-shadow: 20px 0 rgba(124, 77, 255, 0.3), -20px 0 var(--color-cta-primary);background: var(--color-cta-primary)}
-    66% {box-shadow: 20px 0 var(--color-cta-primary),-20px 0 rgba(124, 77, 255, 0.3); background: var(--color-cta-primary)}
-    100%{box-shadow: 20px 0 var(--color-cta-primary),-20px 0 rgba(124, 77, 255, 0.3); background: rgba(124, 77, 255, 0.3) }
+  0% {
+    box-shadow:
+      20px 0 rgba(124, 77, 255, 0.3),
+      -20px 0 var(--color-cta-primary);
+    background: rgba(124, 77, 255, 0.3);
+  }
+  33% {
+    box-shadow:
+      20px 0 rgba(124, 77, 255, 0.3),
+      -20px 0 var(--color-cta-primary);
+    background: var(--color-cta-primary);
+  }
+  66% {
+    box-shadow:
+      20px 0 var(--color-cta-primary),
+      -20px 0 rgba(124, 77, 255, 0.3);
+    background: var(--color-cta-primary);
+  }
+  100% {
+    box-shadow:
+      20px 0 var(--color-cta-primary),
+      -20px 0 rgba(124, 77, 255, 0.3);
+    background: rgba(124, 77, 255, 0.3);
+  }
 }
 
 @theme {
